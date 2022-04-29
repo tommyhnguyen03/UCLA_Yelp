@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Error from "./components/Error"
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import SignUp from './components/SignUp';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<SignUp />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/menu' element={<Menu />} />
           <Route path='*' element={<Error />} />
         </Routes>
