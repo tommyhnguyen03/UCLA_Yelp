@@ -7,6 +7,7 @@ function Home() {
             UCLA Yelp
             <nav>
                 <Link to='/menu'>Menu</Link>
+                <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."/> </a>                
             </nav>
         </div>
 
