@@ -7,22 +7,25 @@ import SignUp from './components/SignUp';
 import BPlate from './components/BPlate';
 import DeNeve from './components/DeNeve';
 import Epicuria from './components/Epicuria';
+import StyledEngineProvider from "@mui/material/StyledEngineProvider"
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path='/' element={<SignUp />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/menu' element={<Menu />} />
-          <Route path='/deneve' element={<DeNeve />} />
-          <Route path='/bplate' element={<BPlate />} />
-          <Route path='/epicuria' element={<Epicuria />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
-      </Router>
+      <StyledEngineProvider injectFirst>
+        <Router>
+          <Routes>
+            <Route path='/' element={<SignUp />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/menu' element={<Menu />} />
+            <Route path='/deneve' element={<DeNeve />} />
+            <Route path='/bplate' element={<BPlate />} />
+            <Route path='/epicuria' element={<Epicuria />} />
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </Router>
+      </StyledEngineProvider>
     </div>
   );
 }
